@@ -1,7 +1,7 @@
-import { Workflow, Step } from "@mastra/core";
+import { LegacyWorkflow, LegacyStep } from "@mastra/core/workflows/legacy";
 import { z } from "zod";
 
-const logCatName = new Step({
+const logCatName = new LegacyStep({
   id: "logCatName",
   outputSchema: z.object({
     rawText: z.string()
@@ -13,7 +13,7 @@ const logCatName = new Step({
   }
 });
 
-export const logCatWorkflow = new Workflow({
+export const logCatWorkflow = new LegacyWorkflow({
   name: "log-cat-workflow",
   triggerSchema: z.object({
     name: z.string()
