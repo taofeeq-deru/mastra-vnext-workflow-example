@@ -9,8 +9,5 @@ export const mastra = new Mastra({
   logger: createLogger({
     name: "Mastra",
     level: "info"
-  }),
-  server: {
-    port: 8000
-  }
+  })
 });
